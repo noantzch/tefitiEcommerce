@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../Firebase/config";
+import { Spinner } from "../../components/Spinner";
 
 
 export default function ItemDetailContainer(){
@@ -25,6 +26,6 @@ export default function ItemDetailContainer(){
         getProductDetail();
     }, [id])
     return (
-        (product ? <ItemDetail product={product}/> : <div className="spinner-border" role="status"></div> )
+        (product ? <ItemDetail product={product}/> : <Spinner /> )
         )
 }

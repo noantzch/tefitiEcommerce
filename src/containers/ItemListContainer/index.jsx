@@ -6,6 +6,7 @@ import { db } from '../../Firebase/config';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
+import { Spinner } from '../../components/Spinner';
 export default function ItemListContainer () {
 
     const [products, setProducts] = useState([]);
@@ -34,6 +35,9 @@ export default function ItemListContainer () {
     }, [categoryId])
 
     return (
-            categoryId ? <ItemList products={products} /> : <> <Header /> <ItemList products={products} /> </>
+            products.length > 1 ?
+            (categoryId ? <ItemList products={products} /> : <> <Header /> <ItemList products={products} /> </>)
+            :
+            <Spinner />
     )
 }
