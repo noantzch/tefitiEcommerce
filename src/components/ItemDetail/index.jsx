@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount";
 import './styles.scss';
 
 export default function ItemDetail({product}){
 
+    const {addProduct} = useContext(CartContext);
+
     const [quantityItemDetail, setQuantityItemDetail] = useState(0);
 
     const addToCart = (quantity) => {
-        console.log(quantity);
+        addProduct({...product, quantity})
         setQuantityItemDetail(quantity);
     };
 
