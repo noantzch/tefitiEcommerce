@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount";
 import './styles.scss';
@@ -14,6 +14,10 @@ export default function ItemDetail({product}){
         addProduct({...product, quantity})
         setQuantityItemDetail(quantity);
     };
+    const navigate = useNavigate();
+    const handleNavigate = () =>{
+        navigate('/cart')
+    }
 
     return(
     <div className="detail">
@@ -23,7 +27,7 @@ export default function ItemDetail({product}){
             <p>{product.description}</p>
             <h5>Precio: ${product.price}</h5>
             {quantityItemDetail ?
-            <Link to="/cart"> <button className="btn btn-dark">Ir al carrito</button> </Link> 
+            <button className="btn btn-dark" onClick={handleNavigate}>Ir al carrito</button>
             : 
             <ItemCount onAdd={addToCart} initial={1} stock={product.stock} />}
         </div>
