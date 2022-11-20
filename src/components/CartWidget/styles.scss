@@ -1,5 +1,9 @@
-#logo-cart{
+.logo-cart{
     font-size: 1.7em;
     display: flex;
     align-items: center;
+}
+.logo-cart-dark{
+    @extend .logo-cart;
+    color: white;
 }

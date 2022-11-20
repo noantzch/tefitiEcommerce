@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Theme } from '../../context/Theme';
 import './styles.scss';
 
 const Item = ({product}) => {
@@ -7,12 +8,13 @@ const Item = ({product}) => {
     const navigateDetail = () =>{
         navigate(`/detail/${product.id}`)
     }
+    const {darkmode} = useContext(Theme)
     return (
-            <div className="card">
+            <div className={darkmode ? "card-dark" : "card"}>
                 <div className="card-body" onClick={navigateDetail}>
-                <img src={product.img} className="card-img-top" alt="producto"></img>
-                    <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">Precio: ${product.price}</p>
+                    <img src={product.img} className="card-img-top" alt="producto"></img>
+                    <h5 className={darkmode ? "card-title-dark" : "card-title"}>{product.name}</h5>
+                    <p className={darkmode ? "card-text-dark" : "card-text"}>Precio: ${product.price}</p>
                 </div>
                     <Link to="/" className="btn btn-primary">Agregar</Link>
             </div>

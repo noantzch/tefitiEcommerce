@@ -1,3 +1,15 @@
 .card{
     width: 12em;
 }
+.card-dark{
+    @extend .card;
+    background-color: black;
+}
+.card-title-dark{
+    @extend .card-title !optional;
+    color: white;
+}
+.card-text-dark{
+    @extend .card-text !optional;
+    color: white;
+}

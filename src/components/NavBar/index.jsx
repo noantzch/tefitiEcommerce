@@ -11,7 +11,6 @@ import Switch from '@mui/material/Switch';
 import { Theme } from "../../context/Theme";
 
     //propiedades importadas del switch theme button
-
     const MaterialUISwitch = styled(Switch)(({ theme }) => ({
         width: 62,
         height: 34,
@@ -69,12 +68,12 @@ const NavBar = () => {
 
     return(
         <nav className= {darkmode ? "navbar navbar-dark bg-dark" : "navbar navbar-light bg-light"}>
-            <div id="logo-text">
+            <div className="logo-text">
                 <img src={logo} id="logo" alt="logo-tefiti"></img>
-                <Link className="navbar-brand" to="/" id="tefiti-text">Tefiti</Link>
+                <Link className="navbar-brand tefiti-text" to="/">Tefiti</Link>
             </div>
-            <form id="barra-b">
-                <input className="me-2" type="search" placeholder="Buscar" aria-label="Buscar"></input>
+            <form className="barra-b">
+                <input className={darkmode ? "me-2-dark" : "me-2"} type="search" placeholder="Buscar" aria-label="Buscar"></input>
                 <button className="btn btn-outline-success" type="submit"> <AiOutlineSearch /> </button>
             </form>
             <FormGroup checked={darkmode} onChange={hanndleChange} >
