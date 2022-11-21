@@ -35,7 +35,7 @@ export default function ItemListContainer () {
     }, [categoryId])
 
     return (
-            products.length > 1 ?
+            products.length > 0 ?
             (categoryId ? <ItemList products={products} /> : <> <Header /> <ItemList products={products} /> </>)
             :
             <Spinner />

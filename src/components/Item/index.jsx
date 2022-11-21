@@ -10,7 +10,7 @@ const Item = ({product}) => {
     }
     const {darkmode} = useContext(Theme)
     return (
-            <div className={darkmode ? "card-dark" : "card"}>
+            <div className={darkmode ? " card card-dark" : "card"}>
                 <div className="card-body" onClick={navigateDetail}>
                     <img src={product.img} className="card-img-top" alt="producto"></img>
                     <h5 className={darkmode ? "card-title-dark" : "card-title"}>{product.name}</h5>

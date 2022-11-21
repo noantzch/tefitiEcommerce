@@ -4,9 +4,7 @@ import './styles.scss'
 export default function Footer(){
     return(
         <footer>
-            <hr></hr>
-            
-            <div>
+            <div className="foot-tefiti">
             <p>
                 TEFITI NATURAL 2022 (C)
                 <br></br>

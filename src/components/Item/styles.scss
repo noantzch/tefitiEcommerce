@@ -1,9 +1,10 @@
 .card{
     width: 12em;
+    margin: 2em;
 }
 .card-dark{
     @extend .card !optional;
-    background-color: black;
+    background-color: rgb(43, 43, 43);
 }
 .card-title-dark{
     @extend .card-title !optional;

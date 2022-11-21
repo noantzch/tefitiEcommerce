@@ -11,8 +11,8 @@ export default function Bookmarks () {
             <Link className="bookmarks" to="/category/Facial">CUIDADO FACIAL </Link>
             <Link className="bookmarks" to="/category/Corporal">CUIDADO CORPORAL </Link>
             <Link className="bookmarks" to="/category/Dental">CUIDADO DENTAL </Link>
-            <Link className="bookmarks" to="/">AROMATERAPIA</Link>  
-            <Link className="bookmarks" to="/">HOGAR</Link>           
+            <Link className="bookmarks" to="/category/Aromaterapia" >AROMATERAPIA</Link>  
+            <Link className="bookmarks" to="/category/Hogar">HOGAR</Link>           
         </div>
     )
 }

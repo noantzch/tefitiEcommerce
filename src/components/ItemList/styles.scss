@@ -3,4 +3,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+}
+.item-list-container-dark{
+    @extend .item-list-container;
+    background-color: black;
 }
