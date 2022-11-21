@@ -16,7 +16,7 @@ const Item = ({product}) => {
                     <h5 className={darkmode ? "card-title-dark" : "card-title"}>{product.name}</h5>
                     <p className={darkmode ? "card-text-dark" : "card-text"}>Precio: ${product.price}</p>
                 </div>
-                    <Link to="/" className="btn btn-primary">Agregar</Link>
+                    <Link to="/" className="btn btn-add">COMPRAR</Link>
             </div>
     )
 }

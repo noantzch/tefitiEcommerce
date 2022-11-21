@@ -7,7 +7,7 @@ const CartContainer = () => {
   return (
     <div>
         {products.map(product =>{
-            return <CartItem item={product}></CartItem>
+            return <CartItem item={product} key={product.id}></CartItem>
         })}
     </div>
   )

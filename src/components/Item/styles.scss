@@ -2,7 +2,7 @@
     width: 12em;
 }
 .card-dark{
-    @extend .card;
+    @extend .card !optional;
     background-color: black;
 }
 .card-title-dark{
@@ -12,4 +12,16 @@
 .card-text-dark{
     @extend .card-text !optional;
     color: white;
+}
+.price-n-add{
+    display: flex;
+}
+.btn-add{
+    background-color: #048b6e;
+    color: white;
+    letter-spacing: 0.35em;
+    :hover{
+        background-color: white;
+        color: #048b6e;
+    }
 }
