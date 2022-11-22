@@ -69,7 +69,7 @@ const NavBar = () => {
     return(
         <nav className= {darkmode ? "navbar navbar-dark bg-dark" : "navbar navbar-light bg-light"}>
             <div className="logo-text">
-                <img src={logo} id="logo" alt="logo-tefiti"></img>
+                <Link to="/"><img src={logo} id="logo" alt="logo-tefiti"></img></Link>
                 <Link className="navbar-brand tefiti-text" to="/">Tefiti</Link>
             </div>
             <form className="barra-b">

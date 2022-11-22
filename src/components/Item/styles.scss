@@ -1,6 +1,14 @@
 .card{
     width: 12em;
     margin: 2em;
+    :hover{
+        box-shadow: 0.01em 0.01em 1em  rgba(59, 59, 59, 0.582);
+    }
+}
+.card-body{
+    :hover{
+        box-shadow: none;
+    }
 }
 .card-dark{
     @extend .card !optional;
@@ -25,4 +33,8 @@
         background-color: white;
         color: #048b6e;
     }
+}
+a{
+    text-decoration: none;
+    color: black;
 }
