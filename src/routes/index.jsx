@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../components/Root";
 import CartContainer from "../containers/CartContainer";
+import CheckoutContainer from "../containers/CheckoutContainer";
 import ItemDetailContainer from "../containers/ItemDetailContainer";
 import ItemListContainer from "../containers/ItemListContainer";
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/cart",
                 element: <CartContainer />,
+            },
+            {
+                path: "/checkout",
+                element: <CheckoutContainer />,
             }
         ],
     },

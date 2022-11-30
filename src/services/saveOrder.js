@@ -37,7 +37,7 @@ export const saveOrder = async (nombre, email, telf, products, total) => {
                     alert(`Se generó la orden correctamente con ID: ${docRef.id}`)
                 }catch (error){
                     console.log(error)
-                }
+                }        
         }
         else{
             alert("Algún producto está fuera de stock")

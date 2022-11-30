@@ -3,6 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Theme } from '../../context/Theme';
 import './styles.scss';
 
+/**
+ * Card del producto con bootstrap
+ * @param {Object} product Producto como objeto para ser rederizado 
+ * @returns JSX del producto renderizado
+ */
+
 const Item = ({product}) => {
     const navigate = useNavigate();
     const navigateDetail = () =>{
