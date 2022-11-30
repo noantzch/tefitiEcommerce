@@ -5,7 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { Theme } from '../../context/Theme';
 import './styles.scss';
-
+/**
+ * Icono de carrito con la cantidad de productos sleeccionados
+ * @returns JSX del icono renderizado
+ */
 const CartWidget= () => {
     const navigate = useNavigate();
     const {darkmode} = useContext(Theme);

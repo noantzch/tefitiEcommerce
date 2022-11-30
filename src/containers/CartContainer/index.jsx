@@ -12,8 +12,6 @@ const CartContainer = () => {
 
     const {products} = useContext(CartContext);
 
-    
-
     return (
     products.length?
     <>

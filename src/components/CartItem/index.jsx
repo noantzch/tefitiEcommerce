@@ -1,6 +1,11 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
+/**
+ * Card del Item seleccionado en carrito
+ * @param {Object} item Item como objeto para ser rederizado 
+ * @returns JSX del item seleccionado para el carrito renderizado
+ */
 
 const CartItem = ({item}) => {
   const {removeProduct} = useContext(CartContext);

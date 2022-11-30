@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import './styles.scss';
 
+/**
+ * Botones para agregar productos al carrito
+ * @param {function} onAdd función para agregar al carrito
+ * @param {}initial cantidad inicial (1) de producto a agregar
+ * @param {}stock stock del producto
+ * @returns JSX de los botones renderizados y funcionales
+ */
+
 const ItemCount = ({onAdd, initial, stock}) => {
 
     const [count, setCount] = useState(initial);

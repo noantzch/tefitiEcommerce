@@ -4,6 +4,12 @@ import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount";
 import './styles.scss';
 
+/**
+ * Navegacion a detalles del producto
+ * @param {Object} product Detalles del producto
+ * @returns JSX del producto detallado renderizado y con botones para agregar
+ */
+
 export default function ItemDetail({product}){
 
     const {addProduct} = useContext(CartContext);

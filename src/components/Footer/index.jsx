@@ -1,6 +1,11 @@
 import React from "react";
 import './styles.scss'
 
+/**
+ * Footer
+ * @returns JSX del footer renderizado
+ */
+
 export default function Footer(){
     return(
         <footer>

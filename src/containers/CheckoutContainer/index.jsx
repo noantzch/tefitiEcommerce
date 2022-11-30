@@ -38,7 +38,7 @@ const CheckoutContainer = () => {
             onSubmit={async (values) => {
                 await new Promise((r) => setTimeout(r, 500));
                 buyer = values;
-                setTimeout( confirmPurchase(), 501);
+                setTimeout( confirmPurchase(), 0);
             }}
         >
             <Form>

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import CartWidget from "../CartWidget";
 import './styles.scss';
 import logo from './logo.png';
-import {AiOutlineSearch} from 'react-icons/ai'
 import { Link } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
@@ -72,10 +71,14 @@ const NavBar = () => {
                 <Link to="/"><img src={logo} id="logo" alt="logo-tefiti"></img></Link>
                 <Link className="navbar-brand tefiti-text" to="/">Tefiti</Link>
             </div>
-            <form className="barra-b">
-                <input className={darkmode ? "me-2-dark" : "me-2"} type="search" placeholder="Buscar" aria-label="Buscar"></input>
-                <button className="btn btn-outline-success" type="submit"> <AiOutlineSearch /> </button>
-            </form>
+            <div className= {darkmode ? "bookmarks-bar-dark" : "bookmarks-bar"}>
+            <Link className="bookmarks" to="/category/Sahumerios">SAHUMERIOS </Link>
+            <Link className="bookmarks" to="/category/Facial">CUIDADO FACIAL </Link>
+            <Link className="bookmarks" to="/category/Corporal">CUIDADO CORPORAL </Link>
+            <Link className="bookmarks" to="/category/Dental">CUIDADO DENTAL </Link>
+            <Link className="bookmarks" to="/category/Aromaterapia" >AROMATERAPIA</Link>  
+            <Link className="bookmarks" to="/category/Hogar">HOGAR</Link>           
+            </div>
             <FormGroup checked={darkmode} onChange={hanndleChange} >
                 <FormControlLabel control={<MaterialUISwitch sx={{ m: 1 }}  />} />
             </FormGroup>
