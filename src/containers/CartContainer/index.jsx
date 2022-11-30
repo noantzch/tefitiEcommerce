@@ -2,55 +2,21 @@ import React, { useContext } from 'react'
 import CartItem from '../../components/CartItem'
 import { Formik, Field, Form } from 'formik';
 import { CartContext } from '../../context/CartContext';
-import generateOrderObject from '../../services/generateOrderObject';
-import { doc, getDoc, updateDoc, collection, addDoc } from "firebase/firestore";
-import { db } from '../../Firebase/config';
+import { saveOrder } from '../../services/saveOrder';
 
 const CartContainer = () => {
     const {products, calculateTotal} = useContext(CartContext);
     let buyer;
 
     const confirmPurchase = () =>{
-
         (async () => { 
-            const generatedOrder = generateOrderObject(
-                                                        buyer.name,
-                                                        buyer.email,
-                                                        buyer.telf,
-                                                        products,
-                                                        calculateTotal());
-            
-            let productOutOfStock = [];
-            for (const productInCart of products){
-                const docRef = doc(db, "products", productInCart.id);
-                const docSnap = await getDoc(docRef);
-                const productInFirebase = {...docSnap.data(), id: doc.id};
-                if (productInCart.quantity > productInFirebase.stock) productOutOfStock.push(productInCart)
-            }
-
-            if(productOutOfStock.length === 0){
-
-                for (const productInCart of products){
-                    const productRef = doc(db, "products", productInCart.id);
-    
-                    const docSnap = await getDoc(productRef);
-                    const productInFirebase = {...docSnap.data(), id: doc.id};
-    
-                    await updateDoc(productRef, {
-                        stock: productInFirebase.stock - productInCart.quantity
-                    })
-                }
-
-                    try{ 
-                        const docRef = await addDoc(collection(db, "orders"), generatedOrder);
-                        alert(`Se generó la orden correctamente con ID: ${docRef.id}`)
-                    }catch (error){
-                        console.log(error)
-                    }
-            }
-            else{
-                alert("Algún producto está fuera de stock")
-            }
+            await saveOrder(
+                buyer.name,
+                buyer.email,
+                buyer.telf,
+                products,
+                calculateTotal()
+            )
         })()
     } 
 
