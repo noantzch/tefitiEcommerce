@@ -3,29 +3,45 @@
 Proyecto creado con ReactJs, Bootstrap, Formik y Firestore.
 <br/>
 
-## Configurar entorno
-
-1. Correr en la consola el comando `npm install`
-2. 
-
-
-## Ejecutar aplicación
-Para levantar la aplicación, ejecutar el comando `npm run start`
-
-<br/>
-
 ---
-
-<br/>
-
-## Librerías públicas utilizadas
+El proyecto consiste en una singlepage aplication, en la que los componentes de react se renderizan con los productos traídos de firebase y mediante react-router se navega hacia los detalles y el carrito (cart) donde se verá los porductos selecionados. Cuando se realiza la compra se sube una orden a firebase con los detalles del comprador y los productos seleccionados.
+<br/><br/>
+---
+## Librerías públicas utilizadas (instaladas por npm)
 
 <br/>
 
 ### Bootstrap
-  >  https://getbootstrap.com/docs/4.5/getting-started/download/
+  >  https://getbootstrap.com/docs/5.0/getting-started/download/
 
 Usada como base para los estilos
+<br/><br/>
+---
+### Sass 
+  >  https://sass-lang.com/install
+
+Usada para el css
+<br/><br/>
+---
+### React Icons 
+  >  https://react-icons.github.io/react-icons/
+
+Para ícono de Cart y Redes Sociales
+<br/><br/>
+---
+### Material UI
+  >  https://mui.com/material-ui/react-switch/
+
+Para switch de modo nocturno
+<br/><br/>
+---
+### Formik
+  >  https://formik.org/docs/overview
+
+Para el formulario de compra
+<br/><br/>
+---
+#### Además se usó REACT ROUTER, REACT CONTEXT Y FIREBASE DE GOOGLE
 <br/><br/>
 ---
 
