@@ -19,7 +19,6 @@ export default function ItemDetailContainer(){
             if (docSnap.exists()) {
                 setProduct({...docSnap.data(), id: docSnap.id})
             } else {
-            // doc.data() will be undefined in this case
             console.log("No such document!");
             }
         }
