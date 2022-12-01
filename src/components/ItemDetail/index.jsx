@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
+import { Theme } from "../../context/Theme";
 import ItemCount from "../ItemCount";
 import './styles.scss';
 
@@ -24,12 +25,13 @@ export default function ItemDetail({product}){
     const handleNavigate = () =>{
         navigate('/cart')
     }
-
+    const {darkmode} = useContext(Theme)
     return(
-    <div className="detail">
+    <div className="detail-container">
         <img className="img-detail" src={product.img} alt={product.name}></img>
-        <div>
+        <div className={darkmode? "detail-dark" : "detail"}>
             <h3>{product.name}</h3>
+            <hr></hr>
             <p>{product.description}</p>
             <h5>Precio: ${product.price}</h5>
             {quantityItemDetail ?

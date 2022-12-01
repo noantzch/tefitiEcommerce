@@ -15,7 +15,7 @@ const CartWidget= () => {
     const {totalItemsCart} = useContext(CartContext)
     return (
     <div className= {darkmode? 'logo-cart-dark' : 'logo-cart'} onClick={() => navigate("/cart")}>
-        <AiOutlineShoppingCart /> <span>{totalItemsCart() === 0 ? null : `(${totalItemsCart()})` } </span>
+        <AiOutlineShoppingCart /> <span id='total-items'>{totalItemsCart() === 0 ? null : `(${totalItemsCart()})` } </span>
     </div>
     )
 }

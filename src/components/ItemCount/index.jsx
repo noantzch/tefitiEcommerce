@@ -21,11 +21,15 @@ const ItemCount = ({onAdd, initial, stock}) => {
         if(count > initial) setCount(count -1)
     }
   return (
-    <div>
+    <div className='count-container'>
+      <div>
         <button className='btn btn-danger' onClick={onDecrement}>-</button>
-        <span>{count}</span>
-        <button className='btn 'onClick={onPlus}>+</button>
-        <button className='btn' onClick={() => onAdd(count)} >Agregar al Carrito</button>
+        <span id='count'> {count} </span>
+        <button className='btn btn-success'onClick={onPlus}>+</button>
+      </div>
+      <div>
+        <button className='btn btn-secondary' onClick={() => onAdd(count)} >Agregar al Carrito</button>
+      </div>
     </div>
   )
 }

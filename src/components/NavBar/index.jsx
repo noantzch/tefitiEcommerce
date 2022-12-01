@@ -58,9 +58,9 @@ import { Theme } from "../../context/Theme";
     }));
 
 const NavBar = () => {
-   
+
     const {darkmode, setDarkmode} = useContext(Theme)
-   
+
     const hanndleChange = (e) =>{
         setDarkmode(e.target.checked);
     }
@@ -71,15 +71,15 @@ const NavBar = () => {
                 <Link to="/"><img src={logo} id="logo" alt="logo-tefiti"></img></Link>
                 <Link className="navbar-brand tefiti-text" to="/">Tefiti</Link>
             </div>
-            <div className= {darkmode ? "bookmarks-bar-dark" : "bookmarks-bar"}>
-            <Link className="bookmarks" to="/category/Sahumerios">SAHUMERIOS </Link>
-            <Link className="bookmarks" to="/category/Facial">CUIDADO FACIAL </Link>
-            <Link className="bookmarks" to="/category/Corporal">CUIDADO CORPORAL </Link>
-            <Link className="bookmarks" to="/category/Dental">CUIDADO DENTAL </Link>
-            <Link className="bookmarks" to="/category/Aromaterapia" >AROMATERAPIA</Link>  
-            <Link className="bookmarks" to="/category/Hogar">HOGAR</Link>           
+            <div>
+            <Link className={darkmode ? "bookmarks-dark": "bookmarks"} to="/category/Sahumerios">SAHUMERIOS </Link>
+            <Link className={darkmode ? "bookmarks-dark": "bookmarks"} to="/category/Facial">CUIDADO FACIAL </Link>
+            <Link className={darkmode ? "bookmarks-dark": "bookmarks"} to="/category/Corporal">CUIDADO CORPORAL </Link>
+            <Link className={darkmode ? "bookmarks-dark": "bookmarks"} to="/category/Dental">CUIDADO DENTAL </Link>
+            <Link className={darkmode ? "bookmarks-dark": "bookmarks"} to="/category/Aromaterapia" >AROMATERAPIA</Link>  
+            <Link className={darkmode ? "bookmarks-dark": "bookmarks"} to="/category/Hogar">HOGAR</Link>           
             </div>
-            <FormGroup checked={darkmode} onChange={hanndleChange} >
+            <FormGroup checked={darkmode} onChange={hanndleChange} className="switch">
                 <FormControlLabel control={<MaterialUISwitch sx={{ m: 1 }}  />} />
             </FormGroup>
 

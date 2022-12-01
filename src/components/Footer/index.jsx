@@ -1,5 +1,6 @@
 import React from "react";
-import './styles.scss'
+import './styles.scss';
+import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 
 /**
  * Footer
@@ -13,17 +14,17 @@ export default function Footer(){
             <p>
                 TEFITI NATURAL 2022 (C)
                 <br></br>
-                Siguenos en nuestras redes
+                Siguenos en nuestras redes sociales
                 <br></br>
-                l o g o s
+                <a href="https://www.facebook.com/tefitinatural" className="redes" target= "_blank" rel="noreferrer"><BsFacebook  /> </a>  
+                <a href="https://www.instagram.com/tefitinatural/" className="redes" target= "_blank" rel="noreferrer"> <BsInstagram /> </a>
+                <a href="https://wa.me/c/5493875925757" className="redes" target= "_blank" rel="noreferrer"> <BsWhatsapp />  </a>    
             </p>
             </div>
 
             <div id="dev">
                 <p>
                 Desarrollado por Luis Noel Antezana
-                <br></br>
-                l o g o s 
                 </p>
             
             </div>
