@@ -31,7 +31,6 @@ export default function ItemDetail({product}){
         <img className="img-detail" src={product.img} alt={product.name}></img>
         <div className={darkmode? "detail-dark" : "detail"}>
             <h3>{product.name}</h3>
-            <hr></hr>
             <p>{product.description}</p>
             <h5>Precio: ${product.price}</h5>
             {quantityItemDetail ?
