@@ -1,6 +1,7 @@
 import { addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../Firebase/config";
 import generateOrderObject from "./generateOrderObject";
+import Swal from 'sweetalert2';
 
 export const saveOrder = async (nombre, email, telf, products, total) => {
     try{
@@ -34,7 +35,7 @@ export const saveOrder = async (nombre, email, telf, products, total) => {
 
                 try{ 
                     const docRef = await addDoc(collection(db, "orders"), generatedOrder);
-                    alert(`Se generó la orden correctamente con ID: ${docRef.id}`)
+                    Swal.fire(`Se generó la orden correctamente con ID: ${docRef.id}`);
                 }catch (error){
                     console.log(error)
                 }        

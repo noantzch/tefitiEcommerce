@@ -10,7 +10,7 @@ import './styles.scss';
  */
 
 const CartItem = ({item}) => {
-  const {darkmode} = useContext(Theme)
+  const {darkmode} = useContext(Theme);
   const {removeProduct} = useContext(CartContext);
   const handleRemove = () => {
     removeProduct(item.id)

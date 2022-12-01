@@ -1,0 +1,12 @@
+.checkout-item{
+    display: flex;
+    align-items: center;
+    p{
+        padding: 0 0.2em;
+    }
+    padding: 0.1em 2em;
+} 
+.checkout-item-dark{
+    @extend .checkout-item;
+    color: white;
+}

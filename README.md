@@ -40,6 +40,11 @@ Para switch de modo nocturno
 
 Para el formulario de compra
 <br/><br/>
+### SweetAlert
+  >  https://sweetalert2.github.io/
+
+Para el alert al finalizar la compra
+<br/><br/>
 ---
 #### Además se usó REACT ROUTER, REACT CONTEXT Y FIREBASE DE GOOGLE
 <br/><br/>
